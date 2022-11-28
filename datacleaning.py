@@ -28,7 +28,7 @@ from gstring import expense_df,sales_df,newsales_df,newexpense_df,ordertime_df
 ##  SALES DATA-CLEANING
 sales_df = sales_df.drop(['Timestamp'],axis=1)
 new_newsales_df = newsales_df.drop(['Timestamp','Order number (Format (#d/m/y/0000) day(6)/month(4)/year(22)/number(0001)) number resets each new day','Time ordered','product ordered type','Toppings/options included [bacon]',
-                                'Toppings/options included [grilled onions]','Toppings/options included [fries]'],axis=1)
+                                'Toppings/options included [grilled onions]','Toppings/options included [fries]','Product ordered quantity [Loaded Fries]','Toppings/options included [cheese]','Toppings/options included [coleslaw]'],axis=1)
 
 new_newsales_df['customer phone'] = '0' + new_newsales_df['customer phone'].astype('str')
 
